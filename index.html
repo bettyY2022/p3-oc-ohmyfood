@@ -3,23 +3,52 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title> Booki</title>
+		<title> ohmyfood</title>
 		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/accueil.css">
 		<link rel="stylesheet" media="screen and (min-width: 768px)" href="css/tablette.css" />
         <link rel="stylesheet" media="screen and (min-width: 992px)" href="css/desktop.css" />
 		<script src="https://kit.fontawesome.com/1979f04e2e.js" crossorigin="anonymous"></script>
 		
 	</head>
-    <body>
-        <header>
-
+    <body class="body">
+        <header class="header">
+           <div><img src="images/logo/ohmyfood.png" alt="ohmyfood" class="logoStyle" /></div>
         </header>
+
         <main>
-
+            <div class="localisationStyle">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Paris, Belleville</p>             
+            </div>
+            <section class="reservation">
+                <h2>Réserver le menu qui <br> vous convient</h2>
+                <p>Découvrez des restaurants d'exception, <br> séléctionnés par nos soins.</p>
+                <button>Explorer nos restaurants</button>
+            </section>
+            <section class="fonctionement">
+                <h2>Fonctionnement</h2>
+                <ol>
+                    <li>Choisissez un restaurant</li>
+                    <li>Composez votre menu</li>
+                    <li>Dégustez au restaurant</li>
+                </ol>
+            </section>
         </main>
-        <footer>
-
+        <footer class="footer">         
+            <h3 class="logoStyleFooter">ohmyfood</h3>
+            <div class="styleLine">
+                <i class="fa-solid fa-utensils"></i>
+                <p>Proposer un restaurant</p>
+            </div>
+            <div class="styleLine">
+                <i class="fa-solid fa-handshake-angle iconPartners"></i>
+                <p>Devenir partenaire</p>
+            </div>
+            <div class="line-height">
+                <p>Mentions légales</p>
+                <p>Contact</p>
+            </div>
         </footer>
     </body>
 </html>
