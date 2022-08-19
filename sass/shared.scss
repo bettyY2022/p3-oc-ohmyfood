@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+@import "./mixin.scss";
+@import "./colors.scss";
+
 .body
 {
     font-family: "roboto",  sans-serif;
@@ -19,25 +22,31 @@
 .footer
 {
     height: 170px;
-    background-color: #3C3B3B;
-    color: white;
+    background-color: $footer-color;
+    color: $white;
     font-size: 14px;
     padding-top: 3%;
-    padding-left: 5%;
+    padding-left: 7%;
     line-height: 7px;
+    & .logoStyleFooter
+    {
+        color: $white;
+        font-family: "Shrikhand", cursive;
+        font-size: 17px;
+        font-weight: 500;
+    }
+    & .styleLine
+    {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        line-height: 2%;
+    }
+    & a {
+        text-decoration: none;
+        color: white;
+    }
 }
-.logoStyleFooter
-{
-    color: white;
-    font-family: "Shrikhand", cursive;
-    font-size: 17px;
-    font-weight: 500;
-}
-.styleLine
-{
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-    line-height: 2%;
-}
+
+
 

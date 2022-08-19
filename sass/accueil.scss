@@ -1,12 +1,16 @@
-@import 'shared';
 
+@import "./mixin.scss";
+@import "./colors.scss";
+@import "./shared.scss";
+@import "./menu.scss";
+@import "./menu-francaise.scss";
 
 .localisationStyle
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F2F2F2;
+    background-color: $gray;
     margin-top: 1.5%;
     gap: 16px;
     font-weight: 500;
@@ -15,31 +19,75 @@
 {
     text-align: center;
     height: 220px;
-    background-color: #F6F6F6;
+    background-color: $light-gray;
     padding: 5%;
     & p {
         font-size: 14px;
     }
     & button {
-        background-image: linear-gradient( #FF79DA, #9356DC);
-        color: white;
+        background-image: linear-gradient( $pink, $purple);
+        color: $white;
         font-weight: bold;
         font-size: 18px;
         padding: 16px;
         border: none;
         border-radius: 30px;
-        box-shadow: -1px 1px 9px -3px #000000;
+        @include box-shadow; 
         transition: transform 200ms;
     }
     & button:hover {
-        transform: scale(1.02);
+        @include transform;
         opacity: 0.9;
     }
 }
 .fonctionement {
+    padding-right: 20px;
     & li {
-        background-color: #f6f6f6;
-        color: #9356DC;
-        margin-top: 0ch;
+        background-color: $gray;
+        border: transparent;
+        padding: 8px 15px;
+        border-radius: 16px;
+        margin: 5%;
+        @include box-shadow; 
+        transition: transform 200ms;
+        display: flex;
+        align-items: baseline;
+
+    }
+    & ol {
+        list-style: none;
+        & :hover {
+            @include transform;
+        }
+    }
+    & i {
+        margin-right: 16px;
+        color: #7e7e7e;
+    }
+    & p {
+        border-radius: 50% ;
+        color: $white;
+        background-color: $purple;
+        width: 24px;
+        height:24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        font-size: 12px;
+        right: 25px;
+    }
+    & h2 {
+        padding-left: 5%;
     }
 }
+.hover {
+    & :hover {
+        background-color: #e2c8ff;
+                & :hover + i {
+            color: #9356DC;
+        }
+    }
+}
+
+

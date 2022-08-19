@@ -1,3 +1,50 @@
-
+.menus {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+.menus .photoRestaurant {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  height: 150px;
+}
+.menus .title {
+  padding-left: 10px;
+  margin-bottom: -5%;
+  margin-top: -4%;
+  color: black;
+  text-decoration: underline white;
+}
+.menus .card {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px 1px #F2F2F2;
+  background-color: white;
+}
+.menus p {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  text-decoration: underline white;
+  color: black;
+}
+.menus .new {
+  background-color: #99E2D0;
+  position: absolute;
+  color: #1b6150;
+  font-size: 12px;
+  border-radius: 2px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: 255px;
+}
+.menus i {
+  font-size: 20px;
+  margin-right: 20px;
+  position: absolute;
+  right: 25px;
+  margin-top: 10px;
+  color: black;
+}
 
 /*# sourceMappingURL=menu.css.map */

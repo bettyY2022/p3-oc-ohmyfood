@@ -1,0 +1,6 @@
+@mixin box-shadow {
+    box-shadow: -1px 1px 9px -3px #000000;
+}
+@mixin transform {
+    transform: scale(1.02);
+}

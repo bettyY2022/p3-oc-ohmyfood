@@ -1,0 +1,53 @@
+
+@import "./mixin.scss";
+@import "./colors.scss";
+
+
+.menus{
+    background-color: $gray;
+    padding: 25px;
+    & .photoRestaurant {
+        width: 100%;
+        border-radius:15px 15px 0 0;
+        object-fit: cover;
+        height: 150px;
+    }
+    & .title {
+        padding-left: 10px;
+        margin-bottom: -5%;
+        margin-top: -4%;
+        color: black;
+        text-decoration: underline white;
+        }
+    & .card {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 4px 4px 4px 1px #F2F2F2;
+        background-color: white;
+        }
+    & p {
+        padding-left: 10px;
+        padding-bottom: 10px;
+        font-size: 14px;
+        text-decoration: underline white;
+        color: black;
+        }
+    & .new{
+        background-color: #99E2D0;
+        position: absolute;
+        color: darken($color:  #99E2D0, $amount: 50%);
+        font-size: 12px;
+        border-radius: 2px;
+        padding: 5px;
+        margin-top: 10px;
+        margin-left: 255px;
+        }
+    & i {
+        font-size: 20px;
+        margin-right: 20px;
+        position: absolute;
+        right: 25px;
+        margin-top: 10px;
+        color: black;
+        }
+}

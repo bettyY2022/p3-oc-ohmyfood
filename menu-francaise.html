@@ -3,11 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title> ohmyfood</title>
+		<title> À la française</title>
 		<link rel="stylesheet" href="css/normalize.css">
+        <!-- <link rel="stylesheet" href="css/accueil.css"> -->
         <link rel="stylesheet" href="css/menu.css">
-		<link rel="stylesheet" media="screen and (min-width: 768px)" href="css/tablette-menu.css" />
-        <link rel="stylesheet" media="screen and (min-width: 992px)" href="css/desktop-menu.css" />
+		<link rel="stylesheet" media="screen and (min-width: 768px)" href="css/tablette.css" />
+        <link rel="stylesheet" media="screen and (min-width: 992px)" href="css/desktop.css" />
 		<script src="https://kit.fontawesome.com/1979f04e2e.js" crossorigin="anonymous"></script>
 		
 	</head>
@@ -15,7 +16,60 @@
         <header class="header">
            <div><img src="images/logo/ohmyfood.png" alt="ohmyfood" class="logoStyle" /></div>
         </header>
-        <main></main>
+        <div><img src="images/restaurants/française.jpg" alt="ohmyfood" class="menuPicture" /></div>
+
+        <main class="menuFrancaise">
+            <h2>À la française</h2>
+            <i class="fa-regular fa-heart"></i>
+            <section class="section">
+                <p class="title-menu">ENTRÉES</p>
+                <div class="card-menu">
+                    <h3>Tartare de poulpe acidulé</h3>
+                    <p>Aux zests d'orange</p><p class="price">25€</p>
+                    <div class="check"></div>
+                </div>
+                <div class="card-menu">
+                    <h3>Velouté de légumes d'antan</h3>
+                    <p>Carotte, panais, topinambour</p><p class="price">35€</p>
+                </div>
+                <div class="card-menu">
+                    <h3>Soupe à l'oignon</h3>
+                    <p>Revisitée</p><p class="price">20€</p>
+                </div>
+            </section>
+            <section class="section">
+                <p class="title-menu">PLATS</p>
+                <div class="card-menu">
+                    <h3>Coquille Saint-Jacques</h3>
+                    <p>Accompagnées d'une purée de panais </p><p class="price">40€</p>
+                </div>
+                <div class="card-menu">
+                    <h3>Magret de canard</h3>
+                    <p>Et parmentier de pommes de terres</p><p class="price">35€</p>
+                </div>
+                <div class="card-menu">
+                    <h3>Pigeonneau d'Ille-et-Vilaine</h3>
+                    <p>Sur son lit de gnocchis aux légumes</p><p class="price">44€</p>
+                </div>
+            </section>
+            <section class="section">
+                <p class="title-menu">DESSERTS</p>
+                <div class="card-menu">
+                    <h3>Pétale de violettes glacés</h3>
+                    <p>Et purée de noisettes</p><p class="price">18€</p>
+                </div>
+                <div class="card-menu">
+                    <h3>Fondant au chocolat</h3>
+                    <p>Revisité</p><p class="price">22€</p>
+                </div>
+                <div class="card-menu">
+                    <h3>Millefeuille croustillant</h3>
+                    <p>Myrtilles et pâte d'amande</p><p class="price">23€</p>
+                </div>
+            </section>
+            <button>Commander</button>
+        </main>
+
         <footer class="footer">         
             <h3 class="logoStyleFooter">ohmyfood</h3>
             <div class="styleLine">
@@ -28,7 +82,9 @@
             </div>
             <div class="line-height">
                 <p>Mentions légales</p>
-                <p>Contact</p>
+                <p>
+                    <a href="mailto:ohmyfood@gmail.com">Contact</a>
+                </p>
             </div>
         </footer>
     </body>
