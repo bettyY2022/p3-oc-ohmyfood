@@ -1,5 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+.body {
+  font-family: "roboto", sans-serif;
+  margin: 0;
+}
+
+.header {
+  box-shadow: 0 0 8px gray;
+}
+
+.logoStyle {
+  margin-left: 20%;
+  width: 50%;
+  padding: 15px;
+}
+
+.footer {
+  height: 170px;
+  background-color: #353535;
+  color: white;
+  font-size: 14px;
+  padding-top: 3%;
+  padding-left: 7%;
+  line-height: 7px;
+}
+.footer .logoStyleFooter {
+  color: white;
+  font-family: "Shrikhand", cursive;
+  font-size: 17px;
+  font-weight: 500;
+}
+.footer .styleLine {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  line-height: 2%;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
 .body {
   font-family: "roboto", sans-serif;
   margin: 0;
@@ -87,7 +130,17 @@
   position: absolute;
   right: 25px;
   margin-top: 10px;
+  color: transparent;
+}
+.menus .heart-icons {
+  font-size: 21px;
   color: black;
+}
+.menus .card:hover .heart-icons {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .menuPicture {
@@ -108,11 +161,22 @@
 .menuFrancaise h2 {
   font-family: "Shrikhand", cursive;
 }
-.menuFrancaise i {
+.menuFrancaise .heart-transition {
   font-size: 20px;
   position: absolute;
   right: 25px;
   margin-top: -50px;
+  color: transparent;
+}
+.menuFrancaise .heart-icons {
+  font-size: 21px;
+  color: black;
+}
+.menuFrancaise .coeur:hover .heart-transition {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .menuFrancaise .card-menu {
   border: 1px solid transparent;
@@ -124,28 +188,53 @@
   padding-left: 10px;
   margin-top: 18px;
 }
-.menuFrancaise .card-menu .check {
+.menuFrancaise .flex-price-check {
+  display: flex;
   position: absolute;
-  right: 15px;
-  margin-top: -55px;
+  margin-left: 90%;
+  margin-top: -40px;
+}
+.menuFrancaise .check {
   background-color: #99E2D0;
-  height: 59px;
-  width: 50px;
+  margin-top: -15px;
   border-radius: 0 1rem 1rem 0;
-  margin-right: -80px;
+  width: 50px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.menuFrancaise .check .icon-check {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s ease;
+  background-color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  color: #99E2D0;
 }
-.menuFrancaise :hover .check {
-  margin-right: 0px;
+.menuFrancaise .card-menu:hover .icon-check {
+  animation: rotation 0.5s ease-in-out;
+  right: auto;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.menuFrancaise .card-menu:hover .price {
+  margin-left: -100%;
 }
 .menuFrancaise .price {
-  position: absolute;
-  right: 75px;
-  margin-top: -17px;
-  font-weight: bold;
+  margin-top: 10px;
+  padding: 1rem;
+  font-weight: 800;
+  margin-left: -55px;
+  margin-right: 12px;
+  transition: all 0.5s;
 }
 .menuFrancaise .section {
   font-size: 14px;
@@ -164,6 +253,7 @@
   margin-left: 70px;
   margin-top: 50px;
   margin-bottom: 50px;
+  cursor: pointer;
 }
 .menuFrancaise button:hover {
   transform: scale(1.02);
@@ -205,6 +295,7 @@
   border-radius: 30px;
   box-shadow: -1px 1px 9px -3px #000000;
   transition: transform 200ms;
+  cursor: pointer;
 }
 .reservation button:hover {
   transform: scale(1.02);

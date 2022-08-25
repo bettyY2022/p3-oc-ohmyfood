@@ -1,6 +1,7 @@
 
 @import "./mixin.scss";
 @import "./colors.scss";
+@import "./shared.scss";
 
 
 .menus{
@@ -47,7 +48,143 @@
         margin-right: 20px;
         position: absolute;
         right: 25px;
-        margin-top: 10px;
-        color: black;
+        margin-top: 10px;   
+        color: transparent;
         }
+    & .heart-icons{
+        font-size: 21px;
+        color: black;  
+    }
+    & .card:hover .heart-icons{ 
+        background-image: linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;    
+    }
 }
+.menuPicture{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: bottom;
+}
+.menuFrancaise {
+    margin-top: -2rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color: #F2F2F2;
+    position: relative;
+    padding: 15px;
+    overflow: hidden;
+    & h2 {
+        font-family: "Shrikhand", cursive;
+    }
+    & .heart-transition {  
+        font-size: 20px; 
+        position: absolute;
+        right: 25px;
+        margin-top: -50px; 
+        color: transparent;
+        }
+    & .heart-icons{
+        font-size: 21px;
+        color: black;  
+    }
+    & .coeur:hover .heart-transition{ 
+        background-image: linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;      
+    }
+    & .card-menu {
+        border: 1px solid transparent;
+        border-radius: 15px;
+        box-shadow: -1px 1px 9px -3px #000000;
+        background-color: white;
+        line-height: 2px;
+        padding: 3px;
+        padding-left: 10px;
+        margin-top: 18px;
+    }
+    & .flex-price-check{
+        display: flex;
+        position: absolute;
+        margin-left: 90%;
+        margin-top: -40px;
+    }
+    & .check{
+        background-color: #99E2D0;
+        margin-top: -15px;
+        border-radius: 0 1rem 1rem 0;   
+        width: 50px;
+        display: grid;
+        place-items: center; 
+        cursor: pointer;
+        & .icon-check{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 1rem;
+            color: #99E2D0;     
+        }
+    }
+    & .card-menu:hover .icon-check {
+        animation: rotation 0.5s ease-in-out; 
+        right: auto;
+    }
+    @keyframes rotation {  
+        0% {
+            transform: rotate(-270deg);
+        }     
+        100% {
+            transform: rotate(0deg);
+        } 
+    }  
+    .card-menu:hover .price {
+        margin-left: -100%;  
+    } 
+    & .price{
+        margin-top: 10px;
+        padding: 1rem;
+        font-weight: 800;
+        margin-left: -55px;
+        margin-right: 12px;
+        transition: all 0.5s;
+    }
+    & .section {
+        font-size: 14px;
+    }
+    & button {
+        background-image: linear-gradient( $pink, $purple);
+        color: $white;
+        font-size: 16px;
+        padding: 15px;
+        width: 55%;
+        border: none;
+        border-radius: 30px;
+        @include box-shadow; 
+        transition: transform 200ms;
+        margin-top: 10px;
+        margin-left: 70px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        cursor: pointer;
+    }
+    & button:hover {
+        @include transform;
+        opacity: 0.9;
+    }
+    & .title-menu {
+        border-bottom: 3.5px solid #99E2D0;
+        margin-right: 90%;
+        padding-bottom: 5px;
+        margin-top: 30px;
+    }
+}
+
+
+
+    
+    

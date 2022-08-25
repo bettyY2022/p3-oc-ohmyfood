@@ -3,7 +3,6 @@
 @import "./colors.scss";
 @import "./shared.scss";
 @import "./menu.scss";
-@import "./menu-francaise.scss";
 
 .localisationStyle
 {
@@ -34,6 +33,7 @@
         border-radius: 30px;
         @include box-shadow; 
         transition: transform 200ms;
+        cursor: pointer;
     }
     & button:hover {
         @include transform;
