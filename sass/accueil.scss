@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $gray;
+    background-color: #ececec;
     margin-top: 1.5%;
     gap: 16px;
     font-weight: 500;
@@ -80,14 +80,68 @@
     & h2 {
         padding-left: 5%;
     }
+    & .hovering :hover i {
+         color: #9356DC;
+        } 
+    & :hover li {
+        background-color:lighten($color:#9356DC, $amount: 35%);
+        } 
 }
-.hover {
-    & :hover {
-        background-color: #e2c8ff;
-                & :hover + i {
-            color: #9356DC;
+.menus{
+    background-color: $gray;
+    padding: 25px;
+    & .photoRestaurant {
+        width: 100%;
+        border-radius:15px 15px 0 0;
+        object-fit: cover;
+        height: 150px;
+    }
+    & .title {
+        padding-left: 10px;
+        margin-bottom: -5%;
+        margin-top: -4%;
+        color: black;
+        text-decoration: underline white;
         }
+    & .card {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 4px 4px 4px 1px #F2F2F2;
+        background-color: white;
+        }
+    & p {
+        padding-left: 10px;
+        padding-bottom: 10px;
+        font-size: 14px;
+        text-decoration: underline white;
+        color: black;
+        }
+    & .new{
+        background-color: #99E2D0;
+        position: absolute;
+        color: darken($color:  #99E2D0, $amount: 50%);
+        font-size: 12px;
+        border-radius: 2px;
+        padding: 5px;
+        margin-top: 10px;
+        margin-left: 255px;
+        }
+    & i {
+        font-size: 20px;
+        margin-right: 20px;
+        position: absolute;
+        right: 25px;
+        margin-top: 10px;   
+        color: transparent;
+        }
+    & .heart-icons{
+        font-size: 21px;
+        color: black;  
+    }
+    & .hover-heart:hover i{ 
+        background-image: linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;    
     }
 }
-
-

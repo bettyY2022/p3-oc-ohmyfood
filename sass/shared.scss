@@ -12,6 +12,12 @@
 .header
 {
     box-shadow: 0 0 8px gray;
+    & i{
+        margin-top: -42px;
+        margin-left: 20px;
+        position: absolute;
+        color: black;
+    }
 }
 .logoStyle
 {
