@@ -5,6 +5,48 @@
   margin: 0;
 }
 
+.spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  opacity: 0.95;
+  animation: disparaitre 2s forwards ease;
+}
+@keyframes disparaitre {
+  to {
+    visibility: hidden;
+  }
+}
+.spinner .dot {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 10px;
+  animation: loader infinite 0.3s alternate;
+}
+.spinner .d1 {
+  background-color: #9356DC;
+}
+.spinner .d2 {
+  animation-delay: 0.05s;
+  background-color: #FF79DA;
+}
+.spinner .d3 {
+  animation-delay: 0.1s;
+  background-color: #99E2D0;
+}
+@keyframes loader {
+  to {
+    transform: translateY(-30px);
+  }
+}
+
 .header {
   box-shadow: 0 0 8px gray;
 }
@@ -54,113 +96,137 @@
   object-position: bottom;
 }
 
-.menuFrancaise {
+.menu-restaurant {
   margin-top: -2rem;
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 32px 32px 0 0;
   background-color: #F2F2F2;
   position: relative;
   padding: 15px;
-  overflow: hidden;
 }
-.menuFrancaise h2 {
+.menu-restaurant h2 {
   font-family: "Shrikhand", cursive;
 }
-.menuFrancaise .heart-transition {
+.menu-restaurant .heart-transition {
   font-size: 20px;
   position: absolute;
   right: 25px;
   margin-top: -50px;
   color: transparent;
 }
-.menuFrancaise .heart-icons {
+.menu-restaurant .heart-icons {
   font-size: 21px;
   color: black;
 }
-.menuFrancaise .coeur:hover .heart-transition {
+.menu-restaurant .coeur:hover .heart-transition {
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
-.menuFrancaise .card-menu {
+.menu-restaurant .card-menu {
   border: 1px solid transparent;
   border-radius: 15px;
   box-shadow: -1px 1px 9px -3px #000000;
   background-color: white;
-  line-height: 2px;
-  padding: 3px;
-  padding-left: 10px;
+  line-height: 0;
   margin-top: 18px;
   cursor: pointer;
-}
-@keyframes apparition {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.menuFrancaise .apparition-menu :nth-child(1) {
-  animation: apparition 0.8s 0.2s ease-out;
-}
-.menuFrancaise .apparition-menu :nth-child(2) {
-  animation: apparition 0.8s 0.4s ease-out;
-}
-.menuFrancaise .apparition-menu :nth-child(3) {
-  animation: apparition 0.8s 0.6s ease-out;
-}
-.menuFrancaise .flex-price-check {
   display: flex;
-  position: absolute;
-  margin-left: 90%;
-  margin-top: -40px;
+  justify-content: space-between;
 }
-.menuFrancaise .check {
+.menu-restaurant .card-menu .menu-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 3px;
+  margin-left: 10px;
+}
+.menu-restaurant .card-menu .menu-info .menu-description {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-restaurant .card-menu .menu-info .menu-description h3 p span {
+  max-width: 83%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 7px 5px;
+}
+.menu-restaurant .card-menu .check {
+  display: none;
   background-color: #99E2D0;
-  margin-top: -15px;
-  border-radius: 0 1rem 1rem 0;
-  width: 50px;
-  display: grid;
+  border-radius: 0 13px 13px 0;
+  width: 23%;
   place-items: center;
 }
-.menuFrancaise .check .icon-check {
+.menu-restaurant .card-menu .check .icon-check {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: white;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 1rem;
+  width: 24px;
+  height: 24px;
+  border-radius: 16px;
   color: #99E2D0;
 }
-.menuFrancaise .card-menu:hover .icon-check {
+.menu-restaurant .card-menu:hover .check {
+  display: grid;
+  animation: check-apparition 1s;
+}
+.menu-restaurant .card-menu:hover .check .icon-check {
   animation: rotation 0.5s ease-in-out;
   right: auto;
 }
-@keyframes rotation {
+@keyframes apparition {
+  from {
+    opacity: 0;
+    margin-top: 30px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 15px;
+  }
+}
+.menu-restaurant .apparition-menu .card-menu {
+  animation: apparition 2s;
+}
+@keyframes menu-info-dimunition {
   0% {
-    transform: rotate(-270deg);
+    width: 100%;
   }
   100% {
-    transform: rotate(0deg);
+    width: 77%;
   }
 }
-.menuFrancaise .card-menu:hover .price {
-  margin-left: -100%;
+@keyframes check-apparition {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 23%;
+  }
 }
-.menuFrancaise .price {
-  margin-top: 10px;
-  padding: 1rem;
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.menu-restaurant .price {
   font-weight: 800;
-  margin-left: -55px;
-  margin-right: 12px;
   transition: all 0.5s;
+  padding-right: 10px;
 }
-.menuFrancaise .section {
+.menu-restaurant .section {
   font-size: 14px;
 }
-.menuFrancaise button {
+.menu-restaurant button {
   background-image: linear-gradient(#FF79DA, #9356DC);
   color: white;
   font-size: 16px;
@@ -176,11 +242,11 @@
   margin-bottom: 50px;
   cursor: pointer;
 }
-.menuFrancaise button:hover {
+.menu-restaurant button:hover {
   transform: scale(1.02);
   opacity: 0.9;
 }
-.menuFrancaise .title-menu {
+.menu-restaurant .title-menu {
   border-bottom: 3.5px solid #99E2D0;
   margin-right: 90%;
   padding-bottom: 5px;

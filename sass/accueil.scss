@@ -52,7 +52,7 @@
         transition: transform 200ms;
         display: flex;
         align-items: baseline;
-
+        font-weight:700;
     }
     & ol {
         list-style: none;
@@ -80,12 +80,12 @@
     & h2 {
         padding-left: 5%;
     }
-    & .hovering :hover i {
-         color: #9356DC;
-        } 
-    & :hover li {
+    & li:hover {
         background-color:lighten($color:#9356DC, $amount: 35%);
-        } 
+        i {
+            color:#9356DC ;
+        }
+    } 
 }
 .menus{
     background-color: $gray;
@@ -142,6 +142,6 @@
         background-image: linear-gradient(#FF79DA, #9356DC);
         background-clip: text;
         -webkit-background-clip: text;
-        color: transparent;    
+        color: transparent; 
     }
 }

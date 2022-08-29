@@ -11,13 +11,13 @@
     object-fit: cover;
     object-position: bottom;
 }
-.menuFrancaise {
+.menu-restaurant {
     margin-top: -2rem;
-    border-radius: 2rem 2rem 0 0;
+    border-radius: 32px 32px 0 0;
     background-color: #F2F2F2;
     position: relative;
     padding: 15px;
-    overflow: hidden;
+
     & h2 {
         font-family: "Shrikhand", cursive;
     }
@@ -43,75 +43,102 @@
         border-radius: 15px;
         box-shadow: -1px 1px 9px -3px #000000;
         background-color: white;
-        line-height: 2px;
-        padding: 3px;
-        padding-left: 10px;
+        line-height: 0;
         margin-top: 18px;
         cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        & .menu-info {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+			padding: 3px;
+            margin-left: 10px;
+            .menu-description {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+				align-items: center;
+                & h3 p span{
+					max-width: 83%; 
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+					padding: 7px 5px;
+                }
+            }
+        }
+        & .check{
+            display: none;
+            background-color: #99E2D0;
+            border-radius: 0 13px 13px 0;   
+            width: 23%;
+            place-items: center; 
+            & .icon-check{
+				align-items: center;
+				display: flex;
+				justify-content: center;
+                background-color: white;
+                width: 24px;
+                height: 24px;
+                border-radius: 16px;
+                color: #99E2D0;     
+            }
+        }
+        &:hover {
+            .check {
+                display: grid;
+                animation: check-apparition 1s;
+                .icon-check {
+                    animation: rotation 0.5s ease-in-out; 
+                    right: auto;
+                }
+            }
+        }
     }
     @keyframes apparition {
+        from {
+            opacity: 0;
+            margin-top: 30px;
+        }
+        to {
+            opacity: 1;
+            margin-top: 15px;
+        }
+    }
+    & .apparition-menu .card-menu {
+        animation: apparition 2s ;
+    }
+    @keyframes menu-info-dimunition {
+	  0% {
+		width: 100%;
+	  }
+	  100% {
+		width: 77%;
+	  }
+	}
+    @keyframes check-apparition {
         0% {
-            transform: scale(0);
+            width: 0%;
         }
         100% {
-            transform: scale(1);
+            width: 23%;
         }
-    }
-    & .apparition-menu :nth-child(1) {
-        animation: apparition 0.8s 0.2s ease-out ;
-    }
-    & .apparition-menu :nth-child(2) {
-        animation: apparition 0.8s 0.4s ease-out ;
-    }
-    & .apparition-menu :nth-child(3) {
-        animation: apparition 0.8s 0.6s ease-out ;
-    }
-    & .flex-price-check{
-        display: flex;
-        position: absolute;
-        margin-left: 90%;
-        margin-top: -40px;
-    }
-    & .check{
-        background-color: #99E2D0;
-        margin-top: -15px;
-        border-radius: 0 1rem 1rem 0;   
-        width: 50px;
-        display: grid;
-        place-items: center; 
-        & .icon-check{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-            width: 1.5rem;
-            height: 1.5rem;
-            border-radius: 1rem;
-            color: #99E2D0;     
-        }
-    }
-    & .card-menu:hover .icon-check {
-        animation: rotation 0.5s ease-in-out; 
-        right: auto;
     }
     @keyframes rotation {  
-        0% {
-            transform: rotate(-270deg);
-        }     
-        100% {
-            transform: rotate(0deg);
-        } 
-    }  
-    .card-menu:hover .price {
-        margin-left: -100%;  
-    } 
+        from {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		to {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+    }
     & .price{
-        margin-top: 10px;
-        padding: 1rem;
         font-weight: 800;
-        margin-left: -55px;
-        margin-right: 12px;
         transition: all 0.5s;
+		padding-right: 10px;
     }
     & .section {
         font-size: 14px;
