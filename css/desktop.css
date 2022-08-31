@@ -1,0 +1,44 @@
+
+.logoStyle{
+    margin-left: 32%;
+    width: 30%;     
+}
+.localisationStyle{
+    margin-top: 5px;
+}
+.footer{
+    margin-left: -70px;
+    padding-top: 10px;
+}
+.reservation {
+    padding: 5px;
+}
+.fonctionement h2 {
+    padding-left: 20px;
+}
+.fonctionement li {
+    padding: 4px 4px;
+    margin: 20px;
+    width: 350px;
+}
+.fonctionement ol {
+    display: flex;
+    justify-content: center;
+}
+.menus .card {
+    width: 100%;
+}
+.menus {
+    display: flex;
+    gap: 10px;
+}
+.menus .new {
+    margin-left: 200px;
+    display: flex;
+}
+.menus i {
+    margin-right: 80%;
+    right: 10px;
+    margin-top: 15px;
+    display: flex;
+}

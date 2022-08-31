@@ -2,6 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+.header {
+  box-shadow: 0 0 8px gray;
+}
+.header i {
+  margin-top: -42px;
+  position: absolute;
+}
+
 .body {
   font-family: "roboto", sans-serif;
   margin: 0;
@@ -89,6 +97,14 @@
 .footer a {
   text-decoration: none;
   color: white;
+}
+
+.header {
+  box-shadow: 0 0 8px gray;
+}
+.header i {
+  margin-top: -42px;
+  position: absolute;
 }
 
 .body {
@@ -187,34 +203,34 @@
   object-position: bottom;
 }
 
-.menuFrancaise {
+.menu-restaurant {
   margin-top: -2rem;
   border-radius: 32px 32px 0 0;
   background-color: #F2F2F2;
   position: relative;
   padding: 15px;
 }
-.menuFrancaise h2 {
+.menu-restaurant h2 {
   font-family: "Shrikhand", cursive;
 }
-.menuFrancaise .heart-transition {
+.menu-restaurant .heart-transition {
   font-size: 20px;
   position: absolute;
   right: 25px;
   margin-top: -50px;
   color: transparent;
 }
-.menuFrancaise .heart-icons {
+.menu-restaurant .heart-icons {
   font-size: 21px;
   color: black;
 }
-.menuFrancaise .coeur:hover .heart-transition {
+.menu-restaurant .coeur:hover .heart-transition {
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
-.menuFrancaise .card-menu {
+.menu-restaurant .card-menu {
   border: 1px solid transparent;
   border-radius: 15px;
   box-shadow: -1px 1px 9px -3px #000000;
@@ -225,34 +241,41 @@
   display: flex;
   justify-content: space-between;
 }
-.menuFrancaise .card-menu .menu-info {
+.menu-restaurant .card-menu .menu-info {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 3px;
   margin-left: 10px;
 }
-.menuFrancaise .card-menu .menu-info .menu-description {
+.menu-restaurant .card-menu .menu-info h3 {
+  max-width: 85%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 10px 5px;
+  margin-bottom: -5px;
+}
+.menu-restaurant .card-menu .menu-info .menu-description {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.menuFrancaise .card-menu .menu-info .menu-description div {
-  max-width: 83%;
+.menu-restaurant .card-menu .menu-info .menu-description p {
+  max-width: 85%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   padding: 7px 5px;
 }
-.menuFrancaise .card-menu .check {
+.menu-restaurant .card-menu .check {
   display: none;
   background-color: #99E2D0;
   border-radius: 0 13px 13px 0;
   width: 23%;
   place-items: center;
 }
-.menuFrancaise .card-menu .check .icon-check {
+.menu-restaurant .card-menu .check .icon-check {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -262,11 +285,11 @@
   border-radius: 16px;
   color: #99E2D0;
 }
-.menuFrancaise .card-menu:hover .check {
+.menu-restaurant .card-menu:hover .check {
   display: grid;
   animation: check-apparition 1s;
 }
-.menuFrancaise .card-menu:hover .check .icon-check {
+.menu-restaurant .card-menu:hover .check .icon-check {
   animation: rotation 0.5s ease-in-out;
   right: auto;
 }
@@ -280,10 +303,7 @@
     margin-top: 15px;
   }
 }
-.menuFrancaise .apparition-menu {
-  animation: apparition 2s;
-}
-.menuFrancaise .apparition-menu .card-menu {
+.menu-restaurant .apparition-menu .card-menu {
   animation: apparition 2s;
 }
 @keyframes menu-info-dimunition {
@@ -312,15 +332,15 @@
     transform: rotate(360deg);
   }
 }
-.menuFrancaise .price {
+.menu-restaurant .price {
   font-weight: 800;
   transition: all 0.5s;
   padding-right: 10px;
 }
-.menuFrancaise .section {
+.menu-restaurant .section {
   font-size: 14px;
 }
-.menuFrancaise button {
+.menu-restaurant button {
   background-image: linear-gradient(#FF79DA, #9356DC);
   color: white;
   font-size: 16px;
@@ -336,15 +356,23 @@
   margin-bottom: 50px;
   cursor: pointer;
 }
-.menuFrancaise button:hover {
+.menu-restaurant button:hover {
   transform: scale(1.02);
   opacity: 0.9;
 }
-.menuFrancaise .title-menu {
+.menu-restaurant .title-menu {
   border-bottom: 3.5px solid #99E2D0;
   margin-right: 90%;
   padding-bottom: 5px;
   margin-top: 30px;
+}
+
+.header {
+  box-shadow: 0 0 8px gray;
+}
+.header i {
+  margin-top: -42px;
+  position: absolute;
 }
 
 .localisationStyle {
