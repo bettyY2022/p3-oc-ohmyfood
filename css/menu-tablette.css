@@ -1,0 +1,12 @@
+
+.header i {
+    margin-top: -55px;
+}
+button{
+    width: 25% !important;
+    margin-left: 35% !important;
+}
+.menuPicture {
+    height: 350px;
+    object-position: center;
+}

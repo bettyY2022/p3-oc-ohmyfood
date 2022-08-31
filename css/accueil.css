@@ -2,14 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-.header {
-  box-shadow: 0 0 8px gray;
-}
-.header i {
-  margin-top: -42px;
-  position: absolute;
-}
-
 .body {
   font-family: "roboto", sans-serif;
   margin: 0;
@@ -97,14 +89,6 @@
 .footer a {
   text-decoration: none;
   color: white;
-}
-
-.header {
-  box-shadow: 0 0 8px gray;
-}
-.header i {
-  margin-top: -42px;
-  position: absolute;
 }
 
 .body {
@@ -365,14 +349,6 @@
   margin-right: 90%;
   padding-bottom: 5px;
   margin-top: 30px;
-}
-
-.header {
-  box-shadow: 0 0 8px gray;
-}
-.header i {
-  margin-top: -42px;
-  position: absolute;
 }
 
 .localisationStyle {

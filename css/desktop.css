@@ -26,19 +26,18 @@
     justify-content: center;
 }
 .menus .card {
-    width: 100%;
-}
-.menus {
-    display: flex;
-    gap: 10px;
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 10%;
 }
 .menus .new {
-    margin-left: 200px;
-    display: flex;
+    margin-left: 72%;
 }
 .menus i {
-    margin-right: 80%;
-    right: 10px;
+    right: 12%;
     margin-top: 15px;
-    display: flex;
+}
+.menus .title {
+    margin-bottom: -1%;
+    margin-top: -10px;
 }

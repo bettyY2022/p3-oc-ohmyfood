@@ -1,0 +1,41 @@
+.logoStyle{
+    margin-left: 32%;
+    width: 30%;     
+}
+.header i {
+    margin-top: -60px;
+}
+.menuPicture {
+    height: 500px;
+    object-position: center;
+}
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu-info{
+    width: 40%;
+}
+.apparition-menu{
+    width: 25%;
+}
+button{
+    width: 25% !important;
+    margin-left: 35% !important;
+}
+.title-menu{
+    margin-left: 20px;
+}
+.footer{
+    padding-left: 40px;
+}
+h2{
+    margin-left: 10px;
+}
+.coeur{
+    cursor: pointer;
+}
+.flex-section{
+    width: 100%;
+    gap: 25px;
+}
