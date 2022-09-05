@@ -1,14 +1,10 @@
-
 @import "./mixin.scss";
-@import "./colors.scss";
 @import "./shared.scss";
 @import "./menu.scss";
 
 .localisationStyle
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     background-color: #ececec;
     margin-top: 1.5%;
     gap: 16px;
@@ -18,14 +14,14 @@
 {
     text-align: center;
     height: 220px;
-    background-color: $light-gray;
+    background-color: #F6F6F6;
     padding: 5%;
     & p {
         font-size: 14px;
     }
     & button {
-        background-image: linear-gradient( $pink, $purple);
-        color: $white;
+        @include color-gradient;
+        color: white;
         font-weight: bold;
         font-size: 18px;
         padding: 16px;
@@ -43,7 +39,7 @@
 .fonctionement {
     padding-right: 20px;
     & li {
-        background-color: $gray;
+        background-color: #f2f2f2;
         border: transparent;
         padding: 8px 15px;
         border-radius: 16px;
@@ -66,18 +62,16 @@
     }
     & p {
         border-radius: 50% ;
-        color: $white;
-        background-color: $purple;
+        color: white;
+        background-color: #9356DC;
         width: 24px;
         height:24px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         position: relative;
         font-size: 12px;
         right: 25px;
     }
-    & h2 {
+    & h1 {
         padding-left: 5%;
     }
     & li:hover {
@@ -88,13 +82,17 @@
     } 
 }
 .menus{
-    background-color: $gray;
+    background-color: #f2f2f2;
     padding: 25px;
     & .photoRestaurant {
         width: 100%;
         border-radius:15px 15px 0 0;
         object-fit: cover;
         height: 150px;
+    }
+    & h2{
+        font-size: 16px;
+        line-height: 2;
     }
     & .title {
         padding-left: 10px;
@@ -119,7 +117,7 @@
     & .new{
         background-color: #99E2D0;
         position: absolute;
-        color: darken($color:  #99E2D0, $amount: 50%);
+        color: darken($color:#99E2D0, $amount: 50%);
         font-size: 12px;
         border-radius: 2px;
         padding: 5px;
@@ -139,7 +137,7 @@
         color: black;  
     }
     & .hover-heart:hover i{ 
-        background-image: linear-gradient(#FF79DA, #9356DC);
+        @include color-gradient;
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent; 

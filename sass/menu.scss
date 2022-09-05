@@ -1,9 +1,5 @@
-
 @import "./mixin.scss";
-@import "./colors.scss";
 @import "./shared.scss";
-
-
 
 .menuPicture{
     width: 100%;
@@ -17,8 +13,9 @@
     background-color: #F2F2F2;
     position: relative;
     padding: 15px;
-    & h2 {
+    & h1 {
         font-family: "Shrikhand", cursive;
+        font-size: 20px;
     }
     & .heart-transition {  
         font-size: 20px; 
@@ -32,7 +29,7 @@
         color: black;  
     }
     & .coeur:hover .heart-transition{ 
-        background-image: linear-gradient(#FF79DA, #9356DC);
+        @include color-gradient;
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;      
@@ -40,7 +37,7 @@
     & .card-menu {
         border: 1px solid transparent;
         border-radius: 15px;
-        box-shadow: -1px 1px 9px -3px #000000;
+        @include box-shadow;
         background-color: white;
         line-height: 0;
         margin-top: 18px;
@@ -55,13 +52,12 @@
             &:hover {
                 width: 77%;
                 }
-            & h3{
+            & h2{
                 max-width: 85%; 
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                @include ellipsis;
                 padding: 10px 5px;
                 margin-bottom: -5px;
+                font-size: 16px;
             }
             .menu-description {
                 width: 100%;
@@ -70,9 +66,7 @@
 				align-items: center;
                 & p {
 					max-width: 85%; 
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+                    @include ellipsis;
 					padding: 7px 5px;
                 }
             }
@@ -84,9 +78,7 @@
             width: 23%;
             place-items: center; 
             & .icon-check{
-				align-items: center;
-				display: flex;
-				justify-content: center;
+                @include flex-center;
                 background-color: white;
                 width: 24px;
                 height: 24px;
@@ -153,8 +145,8 @@
         font-size: 14px;
     }
     & button {
-        background-image: linear-gradient( $pink, $purple);
-        color: $white;
+        @include color-gradient;;
+        color: white;
         font-size: 16px;
         padding: 15px;
         width: 55%;
@@ -179,8 +171,3 @@
         margin-top: 30px;
     }
 }
-
-
-
-    
-    

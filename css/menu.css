@@ -103,8 +103,9 @@
   position: relative;
   padding: 15px;
 }
-.menu-restaurant h2 {
+.menu-restaurant h1 {
   font-family: "Shrikhand", cursive;
+  font-size: 20px;
 }
 .menu-restaurant .heart-transition {
   font-size: 20px;
@@ -143,13 +144,14 @@
 .menu-restaurant .card-menu .menu-info:hover {
   width: 77%;
 }
-.menu-restaurant .card-menu .menu-info h3 {
+.menu-restaurant .card-menu .menu-info h2 {
   max-width: 85%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   padding: 10px 5px;
   margin-bottom: -5px;
+  font-size: 16px;
 }
 .menu-restaurant .card-menu .menu-info .menu-description {
   width: 100%;
@@ -172,9 +174,9 @@
   place-items: center;
 }
 .menu-restaurant .card-menu .check .icon-check {
-  align-items: center;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: white;
   width: 24px;
   height: 24px;

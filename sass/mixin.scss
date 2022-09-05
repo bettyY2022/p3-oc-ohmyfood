@@ -4,3 +4,16 @@
 @mixin transform {
     transform: scale(1.02);
 }
+@mixin ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin color-gradient {
+    background-image: linear-gradient(#FF79DA, #9356DC);
+}

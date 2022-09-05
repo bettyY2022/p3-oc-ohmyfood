@@ -231,6 +231,9 @@
   width: 100%;
   margin-left: 10px;
 }
+.menu-restaurant .card-menu .menu-info:hover {
+  width: 77%;
+}
 .menu-restaurant .card-menu .menu-info h3 {
   max-width: 85%;
   overflow: hidden;
@@ -260,9 +263,9 @@
   place-items: center;
 }
 .menu-restaurant .card-menu .check .icon-check {
-  align-items: center;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: white;
   width: 24px;
   height: 24px;
@@ -425,7 +428,7 @@
   font-size: 12px;
   right: 25px;
 }
-.fonctionement h2 {
+.fonctionement h1 {
   padding-left: 5%;
 }
 .fonctionement li:hover {
@@ -444,6 +447,10 @@
   border-radius: 15px 15px 0 0;
   object-fit: cover;
   height: 150px;
+}
+.menus h2 {
+  font-size: 16px;
+  line-height: 2;
 }
 .menus .title {
   padding-left: 10px;
