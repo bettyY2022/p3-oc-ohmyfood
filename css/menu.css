@@ -182,6 +182,9 @@
   border-radius: 16px;
   color: #99E2D0;
 }
+.menu-restaurant .card-menu:hover .price {
+  animation: price-apparition 0.9s;
+}
 .menu-restaurant .card-menu:hover .check {
   display: grid;
   animation: check-apparition 1s;
@@ -208,7 +211,7 @@
     width: 0%;
   }
   100% {
-    width: 23%;
+    width: 24%;
   }
 }
 @keyframes rotation {
@@ -223,8 +226,15 @@
 }
 .menu-restaurant .price {
   font-weight: 800;
-  transition: all 0.5s;
   padding-right: 10px;
+}
+@keyframes price-apparition {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 7%;
+  }
 }
 .menu-restaurant .section {
   font-size: 14px;

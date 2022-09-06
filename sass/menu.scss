@@ -87,6 +87,9 @@
             }
         }
         &:hover {
+            .price{
+                animation: price-apparition 0.9s ;
+            }
             .check {
                 display: grid;
                 animation: check-apparition 1s;
@@ -115,7 +118,7 @@
             width: 0%;
         }
         100% {
-            width: 23%;
+            width: 24%;
         }
     }
     @keyframes rotation {  
@@ -130,8 +133,15 @@
     }
     & .price{
         font-weight: 800;
-        transition: all 0.5s;
 		padding-right: 10px;
+    }
+    @keyframes price-apparition {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 7%;
+        }
     }
     & .section {
         font-size: 14px;
