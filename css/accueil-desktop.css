@@ -51,6 +51,15 @@
     display: flex;
 }
 .hover-heart{
-    position: absolute !important;
-    margin-left: 23%;
+    position: relative !important;
+    float: right;
 }
+.container{
+    position: relative;
+ }
+ .box{
+     width: 50px;
+     position: absolute;
+     top: 0;
+     right:2%;
+ }
