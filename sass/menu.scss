@@ -110,14 +110,6 @@
     & .apparition-menu .card-menu {
         animation: apparition 2s ;
     }
-    @keyframes menu-info-dimunition {
-	  0% {
-		width: 100%;
-	  }
-	  100% {
-		width: 77%;
-	  }
-	}
     @keyframes check-apparition {
         0% {
             width: 0%;
